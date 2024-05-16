@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 4rem;
+    background-color: yellow;
+}
+
+.main {
+    min-height: calc(100% - 4rem);
+    background-color: green;
+}
+
+.mainContainer {
+    height: calc(100vh - 4rem);
+    margin-top: 2rem;
+}
+  
+  
+
