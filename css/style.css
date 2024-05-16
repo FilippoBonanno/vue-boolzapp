@@ -1,8 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 .header {
     height: 4rem;
@@ -10,14 +6,51 @@
 }
 
 .main {
-    min-height: calc(100% - 4rem);
+    
     background-color: green;
 }
 
-.mainContainer {
-    height: calc(100vh - 4rem);
-    margin-top: 2rem;
+.test {
+    
+}
+
+img {
+    width: 4.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
 }
   
+li {
+    list-style-type: none;
+    padding: 0.5rem;
+}
   
 
+.left-container {
+    overflow-y: scroll;
+    height: calc(100vh - 13rem);
+    
+}
+
+.rightcontainer {
+    position: relative;
+   
+    height: calc(100vh - 10rem);
+    background-color: skyblue;
+}
+
+.footermessage {
+    background-color: aliceblue;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.userInput {
+    width: 45rem;
+}
+
+.cards:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}

@@ -20,13 +20,94 @@
 
     <div id="app" >
 
-        <div class="container mainContainer">
-            <div class="row header ">
+        <div class="container maincontainer d-flex">
+    
+                <div style="background-color: rgb(255, 255, 255);" class="col-4 test">
+
+                    <!-- HEADER -->
+                    <div style="background-color: yellow; border-right: 1px solid lightgrey ;" class=" align-items-center d-flex flex-direction-row flex-nowrap justify-content-between">
+                        <div class=" align-items-center d-flex flex-direction-row flex-nowrap">
+                            <img  src="./img/avatar_1.jpg">
+                            <p class="mb-0">sofia</p>
+                        </div>
+
+                        <div>
+                            <ul class="d-flex align-items-center mb-0">
+                                <li><i class="fa-solid fa-trash-arrow-up"></i></li>
+                                <li><i class="fa-solid fa-trash-arrow-up"></i></li>
+                                <li><i class="fa-solid fa-trash-arrow-up"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- HEADER -->
+
+                    <!-- SEARCH MESS -->
+                    <div class="input-group p-1">
+                        <button class="btn btn-outline-secondary ps-4 pe-4" type="button" id="button-addon1"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                      </div>
+                    <!-- SEARCH MESS -->
+
+
+                    <!-- UTENTI BAR -->
+                    <div class="left-container">
+
+                        
+
+                        <div v-for="item in contacts" class="cards align-items-center d-flex flex-direction-row flex-nowrap border-bottom">
+                            <img  :src = item.avatar>
+                            <p class="mb-0">{{item.name}}</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                 <!-- UTENTI BAR -->
+
+
+
+
+
+
+
+
+
+            
+            <div class="col-8">
+
+                 <!-- HEADER -->
+                 <div style="background-color: yellow; border-right: 1px solid lightgrey ;" class=" align-items-center d-flex flex-direction-row flex-nowrap justify-content-between">
+                    <div class=" align-items-center d-flex flex-direction-row flex-nowrap">
+                        <img  src="./img/avatar_1.jpg">
+                        <p class="mb-0">sofia</p>
+                    </div>
+
+                    <div>
+                        <ul class="d-flex align-items-center mb-0">
+                            <li><i class="fa-solid fa-trash-arrow-up"></i></li>
+                            <li><i class="fa-solid fa-trash-arrow-up"></i></li>
+                            <li><i class="fa-solid fa-trash-arrow-up"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- HEADER -->
+
+                <!-- CONTAINER MESS -->
+                <div class="rightcontainer">
+
+                    <div class="footermessage d-flex justify-content-around align-items-center p-2">
+                        
+                            <a href=""><i class="fa-solid fa-trash-arrow-up"></i></a>
+                            <input type="text" class="form-control userInput" placeholder="Scrivi un messaggio." aria-label="" aria-describedby="">
+                            <a href=""><i class="fa-solid fa-trash-arrow-up"></i></a>
+                        
+                    </div>
+
+                </div>
+                <!-- CONTAINER MESS -->
+
 
             </div>
-            <div class="row main">
-                gfew
-            </div>
+            
             
         </div>
 
