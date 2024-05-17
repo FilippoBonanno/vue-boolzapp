@@ -44,6 +44,7 @@ li {
     position: absolute;
     bottom: 0;
     width: 100%;
+    z-index: 5;
 }
 
 .userInput {
@@ -54,3 +55,12 @@ li {
     background-color: lightgray;
     cursor: pointer;
 }
+
+.leftMessage {
+    margin-left: 15%;
+    background-color: rgb(250, 250, 250);
+    width: 30%;
+    
+};
+
+
