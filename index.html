@@ -52,14 +52,21 @@
                     <!-- UTENTI BAR -->
                     <div class="left-container">
 
-                        <div v-for="item in contacts" class="cards align-items-center d-flex flex-direction-row flex-nowrap border-bottom">
+                        <div @click="clicked(i)" v-for="item, i in contacts" class="cards align-items-center d-flex flex-direction-row flex-nowrap border-bottom">
                             <img  :src = item.avatar>
-                            <p class="mb-0">{{item.name}}</p>
+                            <div>
+                                <p class="mb-0">{{item.name}}</p>
+                                
+                                <p class="text-secondary">{{getLastMessage(item)}}</p>
+                                
+                                
+                            </div>
                         </div>
                         
                     </div>
                 </div>
                  <!-- UTENTI BAR -->
+                
 
 
 
@@ -92,11 +99,24 @@
                 <!-- CONTAINER MESS -->
                 <div class="rightcontainer d-flex justify-content-center">
 
-                    <div class="col-12 pt-4 overflow-scroll position-relative">
-                        <div class="leftMessage position-absolute start-0 rounded p-2">Tutto fatto!</div>
-                        <div style="margin-right: 15%; background-color: rgb(82, 177, 5); width: 30%;" class="position-absolute end-0 rounded p-2">Hai portato a spasso il cane?</div>
-                    
+                    <div  class="col-8 mt-3">
+                        <div v-for="element, i in contacts[userSelect].messages" class=" text-start">
+                            <div v-if="element.status == 'received'"  class="text-start mb-3">
+                                <div class="badge bg-light text-dark leftMessage">{{element.message}} </div>
+                                
+                            </div>
+
+                            <div v-else  class="text-end mb-3">
+                                <div  class="badge bg-success text-dark rightMessage">{{element.message}} </div>
+                                
+                            </div>
+                        </div>
+
+                        
+                        
                     </div>
+                    
+                    
 
                     <div class="fluid footermessage d-flex justify-content-around align-items-center p-2">
                         
