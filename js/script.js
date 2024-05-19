@@ -259,6 +259,7 @@ contacts = [
             return {
                 contacts,
                 userSelect: 0,
+                textUser: ""
                 
                
                 
@@ -274,6 +275,13 @@ contacts = [
 
             getLastMessage(element) {
                 return element.messages.length ? element.messages[element.messages.length - 1].message : '';
+            },
+
+            changeImage (i) {
+                for (let i = 0; i < contacts.length; i++) {
+                    
+                    
+                }
             },
               
             clicked (i) {

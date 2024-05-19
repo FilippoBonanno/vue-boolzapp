@@ -81,9 +81,9 @@
 
                  <!-- HEADER -->
                  <div style="background-color: yellow; border-right: 1px solid lightgrey ;" class=" align-items-center d-flex flex-direction-row flex-nowrap justify-content-between">
-                    <div class=" align-items-center d-flex flex-direction-row flex-nowrap">
-                        <img  src="./img/avatar_1.jpg">
-                        <p class="mb-0">sofia</p>
+                    <div  class=" align-items-center d-flex flex-direction-row flex-nowrap">
+                        <img  :src = contacts[userSelect].avatar>
+                        <p class="mb-0">{{contacts[userSelect].name}}</p>
                     </div>
 
                     <div>
@@ -103,13 +103,21 @@
                         <div v-for="element, i in contacts[userSelect].messages" class=" text-start">
                             <div v-if="element.status == 'received'"  class="text-start mb-3">
                                 <div class="badge bg-light text-dark leftMessage">{{element.message}} </div>
-                                
+                            
                             </div>
 
                             <div v-else  class="text-end mb-3">
                                 <div  class="badge bg-success text-dark rightMessage">{{element.message}} </div>
                                 
+                                
                             </div>
+                            
+
+                        </div>
+                        <div v-if="textUser !== ''"  class="text-end mb-3">
+                            <div  class="badge bg-success text-dark rightMessage">{{textUser}} </div>
+                            
+                            
                         </div>
 
                         
@@ -121,8 +129,10 @@
                     <div class="fluid footermessage d-flex justify-content-around align-items-center p-2">
                         
                             <a href=""><i class="fa-solid fa-trash-arrow-up"></i></a>
-                            <input type="text" class="form-control userInput" placeholder="Scrivi un messaggio." aria-label="" aria-describedby="">
+                            <input v-model="textUser" type="text" class="form-control userInput" placeholder="Scrivi un messaggio." aria-label="" aria-describedby="">
                             <a href=""><i class="fa-solid fa-trash-arrow-up"></i></a>
+                            
+                           
                         
                     </div>
 
