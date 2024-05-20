@@ -1,4 +1,6 @@
-
+.maincontainer {
+    padding-top: 2rem;
+}
 
 .header {
     height: 4rem;
@@ -28,13 +30,13 @@ li {
 
 .left-container {
     overflow-y: scroll;
-    height: calc(100vh - 13rem);
+    height: calc(100vh - 72px - 46px - 4rem);
     
 }
 
 .rightcontainer {
     overflow-y: scroll;
-    height: calc(100vh - 10rem);
+    height: calc(100vh - 72px - 54px - 4rem);
     background-image: url(../img/mine.jpg);
 }
 
