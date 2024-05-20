@@ -260,6 +260,7 @@ contacts = [
                 contacts,
                 userSelect: 0,
                 textUser: "",
+                searchUser: ""
                 
                
                 
@@ -314,6 +315,26 @@ contacts = [
                 this.textUser = ""
             },
 
+            search () {
+                const searchText = this.searchUser.toLowerCase();
+
+                const foundIndex = this.contacts.findIndex(contact => 
+                    contact.name.toLowerCase().includes(searchText)
+                );
+
+                if (foundIndex !== -1) {
+                    this.userSelect = foundIndex;
+                    this.searchUser = ""
+                } else {
+                    alert("Contatto non trovato");
+                }
+                    
+            },
+
+            deleteMessage (messageIndex) {
+                this.contacts[this.userSelect].messages.splice(messageIndex, 1);
+            }
+            
             
           
    

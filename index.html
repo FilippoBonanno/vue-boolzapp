@@ -44,7 +44,7 @@
                     <!-- SEARCH MESS -->
                     <div class="input-group p-1">
                         <button class="btn btn-outline-secondary ps-4 pe-4" type="button" id="button-addon1"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <input @keyup.enter="search" v-model="searchUser" type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Example text with button addon" aria-describedby="button-addon1">
                       </div>
                     <!-- SEARCH MESS -->
 
@@ -91,15 +91,21 @@
 
                     <div  class="col-8 mt-3 ">
                         <div v-for="element, i in contacts[userSelect].messages" class=" text-start">
-                            <div v-if="element.status == 'received'"  class="text-start mb-3">
-                                <div class="badge bg-light text-dark leftMessage"><span style="float: left;">{{element.message}}</span> <span style="float: right;" class="dateTime">{{element.date}}</span></div>
-                                <p></p>
+                            <div v-if="element.status == 'received'"  class="text-start mb-3 dropdown">
+                                <div class="badge bg-light text-dark leftMessage dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false"><span style="float: left;">{{element.message}}</span> <span style="float: right;" class="dateTime " >{{element.date}}</span></div>
+                                <ul class="dropdown-menu">
+                                    <li><a @click="deleteMessage(i)" class="dropdown-item " href="#">Elimina</a></li>
+                
+                                </ul>
                             
                             </div>
 
                             <div v-else  class="text-end mb-3">
-                                <div class="badge text-dark rightMessage"><span style="float: left;">{{element.message}}</span> <span style="float: right;" class="dateTime">{{element.date}}</span></div>
-                                
+                                <div class="badge text-dark rightMessage dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><span style="float: left;">{{element.message}}</span> <span style="float: right;" class="dateTime">{{element.date}}</span></div>
+                                <ul class="dropdown-menu">
+                                    <li><a @click="deleteMessage(i)" class="dropdown-item " href="#">Elimina</a></li>
+                
+                                </ul>
                                 
                             </div>
      
