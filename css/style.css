@@ -33,18 +33,15 @@ li {
 }
 
 .rightcontainer {
-    position: relative;
-   
+    overflow-y: scroll;
     height: calc(100vh - 10rem);
     background-image: url(../img/mine.jpg);
 }
 
 .footermessage {
     background-color: #EAEAEA;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    z-index: 5;
+    
+   
 }
 
 .userInput {
@@ -59,19 +56,23 @@ li {
 
 .rightMessage {
     
+    
     background-color: #D5F9BA;
-    min-width: 30%;
+    min-width: 35%;
     line-height: 2rem;
     text-align: start;
+    height: 50px;
 
 }
 
 .leftMessage {
     
     
-    min-width: 30%;
+    min-width: 35%;
     line-height: 2rem;
     text-align: start;
+    height: 50px;
+
 }
 
 i {
@@ -79,6 +80,11 @@ i {
     color: #B1B2B4;
 }
 
+.dateTime {
+    font-size: 0.45rem;
+    padding-top: 1.5rem;
+    
+}
 
 
 

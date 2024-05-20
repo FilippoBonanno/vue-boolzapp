@@ -58,8 +58,7 @@
                                 <p class="name mb-0">{{item.name}}</p>
                                 
                                 <p class="text-secondary">{{getLastMessage(item)}}</p>
-                                
-                                
+                     
                             </div>
                         </div>
                         
@@ -67,15 +66,6 @@
                 </div>
                  <!-- UTENTI BAR -->
                 
-
-
-
-
-
-
-
-
-
             
             <div class="col-8">
 
@@ -99,15 +89,16 @@
                 <!-- CONTAINER MESS -->
                 <div class="rightcontainer d-flex justify-content-center">
 
-                    <div  class="col-8 mt-3">
+                    <div  class="col-8 mt-3 ">
                         <div v-for="element, i in contacts[userSelect].messages" class=" text-start">
                             <div v-if="element.status == 'received'"  class="text-start mb-3">
-                                <div class="badge bg-light text-dark leftMessage">{{element.message}} </div>
+                                <div class="badge bg-light text-dark leftMessage"><span style="float: left;">{{element.message}}</span> <span style="float: right;" class="dateTime">{{element.date}}</span></div>
+                                <p></p>
                             
                             </div>
 
                             <div v-else  class="text-end mb-3">
-                                <div class="badge text-dark rightMessage">{{element.message}} </div>
+                                <div class="badge text-dark rightMessage"><span style="float: left;">{{element.message}}</span> <span style="float: right;" class="dateTime">{{element.date}}</span></div>
                                 
                                 
                             </div>
@@ -115,21 +106,21 @@
                         </div>
 
                     </div>
+                
                     
                     
 
-                    <div class="fluid footermessage d-flex justify-content-around align-items-center p-2">
-                        
-                            <a href=""><i class="fa-regular fa-face-smile"></i></a>
-                            <input @keyup.enter="sendMessage" v-model="textUser" type="text" class="form-control userInput" placeholder="Scrivi un messaggio." aria-label="" aria-describedby="">
-                            <a href=""><i class="fa-solid fa-microphone"></i></a>
-                            
-                           
-                        
-                    </div>
+                    
 
                 </div>
-                <!-- CONTAINER MESS -->
+
+                <div class="footermessage d-flex justify-content-around align-items-center p-2">
+                        
+                    <a href=""><i class="fa-regular fa-face-smile"></i></a>
+                    <input @keyup.enter="sendMessage" v-model="textUser" type="text" class="form-control userInput" placeholder="Scrivi un messaggio." aria-label="" aria-describedby="">
+                    <a href=""><i class="fa-solid fa-microphone"></i></a>
+                    
+                </div>
 
 
             </div>

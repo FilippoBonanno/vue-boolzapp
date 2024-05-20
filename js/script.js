@@ -259,7 +259,7 @@ contacts = [
             return {
                 contacts,
                 userSelect: 0,
-                textUser: ""
+                textUser: "",
                 
                
                 
@@ -289,18 +289,22 @@ contacts = [
             },
 
             sendMessage() {
+                const currentTime = new Date().toLocaleTimeString();
+
                 this.contacts[this.userSelect].messages.push(
                     {
-                        date: '10/01/2020 15:51:00',
+                        date: currentTime,
                         message: this.textUser,
                         status: 'send'
                     }
                 ),
 
                 setTimeout(() => {
+                   
+
                     this.contacts[this.userSelect].messages.push(
                         {
-                            date: '10/01/2020 15:51:00',
+                            date: currentTime,
                             message: 'OK!!',
                             status: 'received'
                         }
@@ -310,6 +314,7 @@ contacts = [
                 this.textUser = ""
             },
 
+            
           
    
            
