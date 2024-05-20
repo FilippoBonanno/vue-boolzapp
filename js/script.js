@@ -286,11 +286,32 @@ contacts = [
               
             clicked (i) {
                 this.userSelect = i
-            }
+            },
 
+            sendMessage() {
+                this.contacts[this.userSelect].messages.push(
+                    {
+                        date: '10/01/2020 15:51:00',
+                        message: this.textUser,
+                        status: 'send'
+                    }
+                ),
 
-           
-    
+                setTimeout(() => {
+                    this.contacts[this.userSelect].messages.push(
+                        {
+                            date: '10/01/2020 15:51:00',
+                            message: 'OK!!',
+                            status: 'received'
+                        }
+                    )
+                }, 3000);
+
+                this.textUser = ""
+            },
+
+          
+   
            
         },
         

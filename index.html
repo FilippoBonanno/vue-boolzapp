@@ -111,17 +111,9 @@
                                 
                                 
                             </div>
-                            
-
-                        </div>
-                        <div v-if="textUser !== ''"  class="text-end mb-3">
-                            <div  class="badge bg-success text-dark rightMessage">{{textUser}} </div>
-                            
-                            
+     
                         </div>
 
-                        
-                        
                     </div>
                     
                     
@@ -129,7 +121,7 @@
                     <div class="fluid footermessage d-flex justify-content-around align-items-center p-2">
                         
                             <a href=""><i class="fa-solid fa-trash-arrow-up"></i></a>
-                            <input v-model="textUser" type="text" class="form-control userInput" placeholder="Scrivi un messaggio." aria-label="" aria-describedby="">
+                            <input @keyup.enter="sendMessage" v-model="textUser" type="text" class="form-control userInput" placeholder="Scrivi un messaggio." aria-label="" aria-describedby="">
                             <a href=""><i class="fa-solid fa-trash-arrow-up"></i></a>
                             
                            
