@@ -2,16 +2,16 @@
 
 .header {
     height: 4rem;
-    background-color: yellow;
+    background-color: #EAEAEA;
 }
 
 .main {
     
     background-color: green;
 }
-
-.test {
-    
+ 
+.name {
+    font-weight: bold;
 }
 
 img {
@@ -36,11 +36,11 @@ li {
     position: relative;
    
     height: calc(100vh - 10rem);
-    background-color: skyblue;
+    background-image: url(../img/mine.jpg);
 }
 
 .footermessage {
-    background-color: aliceblue;
+    background-color: #EAEAEA;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -49,25 +49,34 @@ li {
 
 .userInput {
     width: 45rem;
+    
 }
 
 .cards:hover {
-    background-color: lightgray;
+    background-color: #E9EBEB;
     cursor: pointer;
 }
 
 .rightMessage {
     
-    
+    background-color: #D5F9BA;
     min-width: 30%;
-    
+    line-height: 2rem;
+    text-align: start;
+
 }
 
 .leftMessage {
     
     
     min-width: 30%;
-    
+    line-height: 2rem;
+    text-align: start;
+}
+
+i {
+    font-size: 1.3rem;
+    color: #B1B2B4;
 }
 
 
