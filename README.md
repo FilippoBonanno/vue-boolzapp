@@ -1,4 +1,4 @@
-<p align="center"><a href="https://vuejs.org/" target="_blank"><img src="./img/Screenshot 2024-10-11 033240.png" width="800" alt="Interfaccia Utente di ChatApp"></a></p>
+<p align="center"><a href="https://vuejs.org/" target="_blank"><img src="./img/Screenshot 2024-10-11 033240.png" width="100%" alt="Interfaccia Utente di ChatApp"></a></p>
 
 <p align="center">
 <img src="https://img.shields.io/badge/project-ChatApp-brightgreen" alt="Project Status">
